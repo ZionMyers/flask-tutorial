@@ -29,3 +29,7 @@ def greet_user(user_id):
         return '<h2>Hi {}</h2>'.format(users[user_id])
     except IndexError:
         abort(404)
+
+@app.route('/myName/<word>/<word1>/<word2>/')
+def myName(word,word1 ,word2):
+     return '<h1>{''}</h1>'.format(escape(word.capitalize())+' '+ escape(word1.capitalize())+' '+escape(word2.capitalize()))
